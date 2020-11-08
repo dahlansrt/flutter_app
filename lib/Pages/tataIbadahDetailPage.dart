@@ -1,44 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/Models/TataIbadah.dart';
 
-/*
-class TataIbadahDetailPage extends StatelessWidget {
-  final TataIbadah tataIbadah;
-  TabController _tabController;
-  TataIbadahDetailPage({@required this.tataIbadah});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: DefaultTabController(
-        length: 4,
-        child: Scaffold(
-          appBar: AppBar(
-            title: Text(tataIbadah.nama_minggu),
-            bottom: TabBar(
-              tabs: <Widget>[
-                Tab(icon: Icon(Icons.access_time), text: "06:00 WIB"),
-                Tab(icon: Icon(Icons.access_time), text: "09:00 WIB"),
-                Tab(icon: Icon(Icons.access_time), text: "15:00 WIB"),
-                Tab(icon: Icon(Icons.access_time), text: "18:00 WIB")
-              ],
-            ),
-          ),
-          body: TabBarView(
-            children: <Widget>[
-              Text(tataIbadah.tata_ibadah_6),
-              Text(tataIbadah.tata_ibadah_9),
-              Text(tataIbadah.tata_ibadah_15),
-              Text(tataIbadah.tata_ibadah_18),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-*/
-
 class TataIbadahDetailPage extends StatefulWidget {
   final TataIbadah tataIbadah;
   TabController _tabController;
@@ -78,10 +40,20 @@ class _TabPageState extends State<TataIbadahDetailPage>
         children: [
           SingleChildScrollView(
             child: Container(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.topRight,
+                      end: Alignment.bottomLeft,
+                      colors: [
+                    Colors.purple,
+                    Colors.purpleAccent,
+                    Colors.deepPurple,
+                    Colors.deepPurpleAccent
+                  ])),
               padding: new EdgeInsets.all(20.0),
               child: Text(
                 widget.tataIbadah.tata_ibadah_18,
-                style: TextStyle(fontSize: 20.0),
+                style: TextStyle(fontSize: 20.0, color: Colors.white, fontWeight: FontWeight.bold),
               ),
             ),
           ),

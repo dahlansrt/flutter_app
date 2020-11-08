@@ -20,7 +20,7 @@ class WartaPage extends StatelessWidget {
                 (BuildContext context, AsyncSnapshot<Warta> snapshot) {
               if (snapshot.hasData) {
                 Warta warta = snapshot.data;
-                return Text(warta.content);
+                return Text(warta.content, style: TextStyle(fontSize: 20),);
               } else {
                 return Center(child: CircularProgressIndicator());
               }

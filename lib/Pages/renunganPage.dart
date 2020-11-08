@@ -23,31 +23,44 @@ class RenunganPage extends StatelessWidget {
                   .map(
                     (Renungan post) => Card(
                       elevation: 6,
-                      child: ListTile(
-                        contentPadding: EdgeInsets.symmetric(
-                            horizontal: 20.0, vertical: 10.0),
-                        leading: Padding(
-                          padding: EdgeInsets.all(2.0),
-                          child: Column(
-                            children: <Widget>[
-                              Text(
-                                "${post.bulan}",
-                                style: TextStyle(fontSize: 20.0),
-                              ),
-                              SizedBox(height: 4),
-                              Text(
-                                "${post.tanggal}",
-                                style: TextStyle(fontSize: 25.0),
-                              ),
-                            ],
+                      child: Container(
+                        decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                                begin: Alignment.topRight,
+                                end: Alignment.bottomLeft,
+                                colors: [
+                              Colors.purple,
+                              Colors.deepPurpleAccent
+                            ])),
+                        child: ListTile(
+                          contentPadding: EdgeInsets.symmetric(
+                              horizontal: 20.0, vertical: 10.0),
+                          leading: Padding(
+                            padding: EdgeInsets.all(2.0),
+                            child: Column(
+                              children: <Widget>[
+                                Text(
+                                  "${post.bulan}",
+                                  style: TextStyle(fontSize: 20.0, color: Colors.white),
+                                ),
+                                SizedBox(height: 4),
+                                Text(
+                                  "${post.tanggal}",
+                                  style: TextStyle(fontSize: 25.0, color: Colors.white),
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                        title: Text("${post.judul}"),
-                        subtitle: Text("${post.name}"),
-                        onTap: () => Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => RenunganDetailPage(
-                              renungan: post,
+                          trailing: Icon(Icons.keyboard_arrow_right, color: Colors.white,),
+                          title: Text("${post.judul}",
+                            style: TextStyle(fontSize: 20.0, color: Colors.white)),
+                          subtitle: Text("${post.name}",
+                            style: TextStyle(fontSize: 16.0, color: Colors.white)),
+                          onTap: () => Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => RenunganDetailPage(
+                                renungan: post,
+                              ),
                             ),
                           ),
                         ),

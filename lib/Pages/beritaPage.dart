@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/Models/TataIbadah.dart';
-import 'package:flutter_app/Pages/tataIbadahDetailPage.dart';
-import 'package:flutter_app/Services/tataIbadahService.dart';
+import 'package:flutter_app/Models/Berita.dart';
+import 'package:flutter_app/Pages/beritaDetailPage.dart';
+import 'package:flutter_app/Services/beritaService.dart';
 
-class TataIbadahPage extends StatelessWidget {
-  final TataIbadahService tataIbadahService= TataIbadahService();
+class BeritaPage extends StatelessWidget {
+  final BeritaService beritaService = BeritaService();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Tata Ibadah"),
+        title: Text("Berita"),
       ),
       body: FutureBuilder(
-        future: tataIbadahService.getTataIbadah(),
+        future: beritaService.getBerita(),
         builder:
-            (BuildContext context, AsyncSnapshot<List<TataIbadah>> snapshot) {
+            (BuildContext context, AsyncSnapshot<List<Berita>> snapshot) {
           if (snapshot.hasData) {
-            List<TataIbadah> posts = snapshot.data;
+            List<Berita> posts = snapshot.data;
             return ListView(
               children: posts
                   .map(
-                    (TataIbadah post) => Card(
+                    (Berita post) => Card(
                   elevation: 6,
                   child: ListTile(
                     contentPadding: EdgeInsets.symmetric(
@@ -30,12 +30,13 @@ class TataIbadahPage extends StatelessWidget {
                       padding: EdgeInsets.all(2.0),
                       child: Icon(Icons.schedule),
                     ),
-                    title: Text("${post.nama_minggu}"),
-                    subtitle: Text("${post.arti_minggu}"),
+                    trailing: Icon(Icons.keyboard_arrow_right),
+                    title: Text("${post.judul}"),
+                    subtitle: Text("${post.tanggal}"),
                     onTap: () => Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => TataIbadahDetailPage(
-                          tataIbadah: post,
+                        builder: (context) => BeritaDetailPage(
+                          berita: post,
                         ),
                       ),
                     ),

@@ -16,7 +16,16 @@ class RenunganDetailPage extends StatelessWidget {
         title: Text(renungan.judul),
       ),
       body: SingleChildScrollView(
-        child: Padding(
+        child: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                Colors.purple,
+                Colors.purpleAccent,
+                Colors.deepPurple,
+              ])),
           padding: const EdgeInsets.all(12.0),
           child: FutureBuilder(
             future: renunganService.getRenunganDetail(renungan.id),
@@ -24,7 +33,9 @@ class RenunganDetailPage extends StatelessWidget {
                 (BuildContext context, AsyncSnapshot<RenunganDetail> snapshot) {
               if (snapshot.hasData) {
                 RenunganDetail rd = snapshot.data;
-                return Text(rd.content);
+                return Text(rd.content,
+                    style:
+                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white));
               } else {
                 return Center(child: CircularProgressIndicator());
               }

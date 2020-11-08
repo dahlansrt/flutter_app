@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/Pages/beritaPage.dart';
 import 'package:flutter_app/Pages/renunganPage.dart';
 import 'package:flutter_app/Pages/tataIbadahPage.dart';
 import 'package:flutter_app/Pages/wartaPage.dart';
@@ -23,13 +24,13 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.deepPurple,
+        primarySwatch: Colors.purple,
         // This makes the visual density adapt to the platform that you run
         // the app on. For desktop platforms, the controls will be smaller and
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'HKBP Tebet'),
     );
   }
 }
@@ -82,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           // Here we take the value from the MyHomePage object that was created by
           // the App.build method, and use it to set our appbar title.
-          title: Text(widget.title),
+          title: Text(widget.title, style: TextStyle(fontSize: 35.0)),
         ),
         body: SingleChildScrollView(
             child: Container(
@@ -92,19 +93,26 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 new Card(
-                  elevation: 6,
+                  color: Colors.deepPurple,
+                  elevation: 8,
                   child: new Container(
                     padding: new EdgeInsets.all(16.0),
                     child: new Column(
                       children: <Widget>[
-                        new Text('MINGGU LETARE: 22 MARET 2020'),
-                        new Text('SUKACITA DALAM TUHAN')
+                        new Text(
+                          'MINGGU LETARE: 22 MARET 2020',
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
+                        new Text(
+                          'SUKACITA DALAM TUHAN',
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        )
                       ],
                     ),
                   ),
                 ),
                 new Card(
-                  elevation: 6,
+                  elevation: 8,
                   child: new Container(
                     padding: new EdgeInsets.all(8.0),
                     child: new Column(
@@ -117,14 +125,21 @@ class _MyHomePageState extends State<MyHomePage> {
                               padding: new EdgeInsets.all(16.0),
                               width: 100,
                               height: 100,
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Colors.deepPurpleAccent)),
                               child: new Column(
+                                mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   new Ink(
                                     decoration: const ShapeDecoration(
-                                        color: Colors.purple,
+                                        gradient: LinearGradient(
+                                            begin: Alignment.topRight,
+                                            end: Alignment.bottomLeft,
+                                            colors: [
+                                              Colors.purple,
+                                              Colors.purpleAccent,
+                                              Colors.deepPurple,
+                                              Colors.deepPurpleAccent
+                                            ]),
+                                        //color: Colors.purple,
                                         shape: CircleBorder()),
                                     child: IconButton(
                                       icon: Icon(Icons.menu_book),
@@ -151,19 +166,32 @@ class _MyHomePageState extends State<MyHomePage> {
                               padding: new EdgeInsets.all(16.0),
                               width: 100,
                               height: 100,
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Colors.deepPurpleAccent)),
                               child: new Column(
                                 children: <Widget>[
                                   new Ink(
                                     decoration: const ShapeDecoration(
-                                        color: Colors.purple,
+                                        gradient: LinearGradient(
+                                            begin: Alignment.topRight,
+                                            end: Alignment.bottomLeft,
+                                            colors: [
+                                              Colors.purple,
+                                              Colors.purpleAccent,
+                                              Colors.deepPurple,
+                                              Colors.deepPurpleAccent
+                                            ]),
+                                        //color: Colors.purple,
                                         shape: CircleBorder()),
                                     child: IconButton(
                                       icon: Icon(Icons.message),
                                       color: Colors.white,
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  BeritaPage()),
+                                        );
+                                      },
                                     ),
                                   ),
                                   SizedBox(height: 4),
@@ -178,14 +206,20 @@ class _MyHomePageState extends State<MyHomePage> {
                               padding: new EdgeInsets.all(16.0),
                               width: 100,
                               height: 100,
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Colors.deepPurpleAccent)),
                               child: new Column(
                                 children: <Widget>[
                                   new Ink(
                                     decoration: const ShapeDecoration(
-                                        color: Colors.purple,
+                                        gradient: LinearGradient(
+                                            begin: Alignment.topRight,
+                                            end: Alignment.bottomLeft,
+                                            colors: [
+                                              Colors.purple,
+                                              Colors.purpleAccent,
+                                              Colors.deepPurple,
+                                              Colors.deepPurpleAccent
+                                            ]),
+                                        //color: Colors.purple,
                                         shape: CircleBorder()),
                                     child: IconButton(
                                       icon: Icon(Icons.call),
@@ -210,14 +244,20 @@ class _MyHomePageState extends State<MyHomePage> {
                               padding: new EdgeInsets.all(16.0),
                               width: 100,
                               height: 100,
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Colors.deepPurpleAccent)),
                               child: new Column(
                                 children: <Widget>[
                                   new Ink(
                                     decoration: const ShapeDecoration(
-                                        color: Colors.purple,
+                                        gradient: LinearGradient(
+                                            begin: Alignment.topRight,
+                                            end: Alignment.bottomLeft,
+                                            colors: [
+                                              Colors.purple,
+                                              Colors.purpleAccent,
+                                              Colors.deepPurple,
+                                              Colors.deepPurpleAccent
+                                            ]),
+                                        //color: Colors.purple,
                                         shape: CircleBorder()),
                                     child: IconButton(
                                       icon: Icon(Icons.video_library),
@@ -237,14 +277,20 @@ class _MyHomePageState extends State<MyHomePage> {
                               padding: new EdgeInsets.all(16.0),
                               width: 100,
                               height: 100,
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Colors.deepPurpleAccent)),
                               child: new Column(
                                 children: <Widget>[
                                   new Ink(
                                     decoration: const ShapeDecoration(
-                                        color: Colors.purple,
+                                        gradient: LinearGradient(
+                                            begin: Alignment.topRight,
+                                            end: Alignment.bottomLeft,
+                                            colors: [
+                                              Colors.purple,
+                                              Colors.purpleAccent,
+                                              Colors.deepPurple,
+                                              Colors.deepPurpleAccent
+                                            ]),
+                                        //color: Colors.purple,
                                         shape: CircleBorder()),
                                     child: IconButton(
                                       icon: Icon(Icons.article),
@@ -265,14 +311,20 @@ class _MyHomePageState extends State<MyHomePage> {
                               //alignment: Alignment.center,
                               width: 100,
                               height: 100,
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Colors.deepPurpleAccent)),
                               child: new Column(
                                 children: <Widget>[
                                   new Ink(
                                     decoration: const ShapeDecoration(
-                                        color: Colors.purple,
+                                        gradient: LinearGradient(
+                                            begin: Alignment.topRight,
+                                            end: Alignment.bottomLeft,
+                                            colors: [
+                                              Colors.purple,
+                                              Colors.purpleAccent,
+                                              Colors.deepPurple,
+                                              Colors.deepPurpleAccent
+                                            ]),
+                                        //color: Colors.purple,
                                         shape: CircleBorder()),
                                     child: IconButton(
                                       icon: Icon(Icons.text_snippet),
@@ -297,14 +349,20 @@ class _MyHomePageState extends State<MyHomePage> {
                               padding: new EdgeInsets.all(16.0),
                               width: 100,
                               height: 100,
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Colors.deepPurpleAccent)),
                               child: new Column(
                                 children: <Widget>[
                                   new Ink(
                                     decoration: const ShapeDecoration(
-                                        color: Colors.purple,
+                                        gradient: LinearGradient(
+                                            begin: Alignment.topRight,
+                                            end: Alignment.bottomLeft,
+                                            colors: [
+                                              Colors.purple,
+                                              Colors.purpleAccent,
+                                              Colors.deepPurple,
+                                              Colors.deepPurpleAccent
+                                            ]),
+                                        //color: Colors.purple,
                                         shape: CircleBorder()),
                                     child: IconButton(
                                       icon: Icon(Icons.library_music),
@@ -324,14 +382,20 @@ class _MyHomePageState extends State<MyHomePage> {
                               padding: new EdgeInsets.all(16.0),
                               width: 100,
                               height: 100,
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Colors.deepPurpleAccent)),
                               child: new Column(
                                 children: <Widget>[
                                   new Ink(
                                     decoration: const ShapeDecoration(
-                                        color: Colors.purple,
+                                        gradient: LinearGradient(
+                                            begin: Alignment.topRight,
+                                            end: Alignment.bottomLeft,
+                                            colors: [
+                                              Colors.purple,
+                                              Colors.purpleAccent,
+                                              Colors.deepPurple,
+                                              Colors.deepPurpleAccent
+                                            ]),
+                                        //color: Colors.purple,
                                         shape: CircleBorder()),
                                     child: IconButton(
                                       icon: Icon(Icons.local_library_outlined),
@@ -358,14 +422,20 @@ class _MyHomePageState extends State<MyHomePage> {
                               padding: new EdgeInsets.all(16.0),
                               width: 100,
                               height: 100,
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Colors.deepPurpleAccent)),
                               child: new Column(
                                 children: <Widget>[
                                   new Ink(
                                     decoration: const ShapeDecoration(
-                                        color: Colors.purple,
+                                        gradient: LinearGradient(
+                                            begin: Alignment.topRight,
+                                            end: Alignment.bottomLeft,
+                                            colors: [
+                                              Colors.purple,
+                                              Colors.purpleAccent,
+                                              Colors.deepPurple,
+                                              Colors.deepPurpleAccent
+                                            ]),
+                                        //color: Colors.purple,
                                         shape: CircleBorder()),
                                     child: IconButton(
                                       icon: Icon(Icons.list_alt),
@@ -394,18 +464,39 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
+                SizedBox(height: 8),
                 new Card(
                   elevation: 6,
                   child: new Container(
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment
+                          .bottomRight, // 10% of the width, so there are ten blinds.
+                      colors: [
+                        Colors.purple,
+                        Colors.deepPurple,
+                        Colors.deepPurpleAccent
+                      ], // red to yellow
+                      tileMode: TileMode.repeated,
+                    )),
+                    //color: Colors.deepPurple,
                     padding: new EdgeInsets.all(32.0),
                     child: new Column(
                       children: <Widget>[
-                        new Text('BERITA HKBP TEBET'),
-                        new Text('SUKACITA DALAM TUHAN')
+                        new Text(
+                          'BERITA HKBP TEBET',
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
+                        new Text(
+                          'SUKACITA DALAM TUHAN',
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
                       ],
                     ),
                   ),
                 ),
+                SizedBox(height: 4),
                 new SizedBox(
                   height: 200,
                   child: ListView.builder(
