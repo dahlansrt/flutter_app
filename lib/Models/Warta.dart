@@ -8,7 +8,13 @@ class Warta {
   final String created_by;
 
   Warta(
-      {this.id, this.kategori, this.judul, this.content, this.tanggal, this.created_at, this.created_by});
+      {this.id,
+      this.kategori,
+      this.judul,
+      this.content,
+      this.tanggal,
+      this.created_at,
+      this.created_by});
 
   factory Warta.fromJson(Map<String, dynamic> json) {
     return Warta(

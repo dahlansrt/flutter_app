@@ -22,9 +22,9 @@ class RenunganDetailPage extends StatelessWidget {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                Colors.purple,
-                Colors.purpleAccent,
-                Colors.deepPurple,
+                    Colors.purple,
+                    Colors.purpleAccent,
+                    Colors.deepPurple
               ])),
           padding: const EdgeInsets.all(12.0),
           child: FutureBuilder(

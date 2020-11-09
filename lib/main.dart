@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/Pages/beritaPage.dart';
 import 'package:flutter_app/Pages/renunganPage.dart';
 import 'package:flutter_app/Pages/tataIbadahPage.dart';
+import 'package:flutter_app/Pages/videoPage.dart';
 import 'package:flutter_app/Pages/wartaPage.dart';
 
 void main() {
@@ -83,14 +84,27 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           // Here we take the value from the MyHomePage object that was created by
           // the App.build method, and use it to set our appbar title.
-          title: Text(widget.title, style: TextStyle(fontSize: 35.0)),
+          title: Wrap(
+            children: [
+              Text(widget.title,
+                  style:
+                      TextStyle(fontSize: 36.0, fontWeight: FontWeight.w600)),
+              Text("JL Tebet Barat Dalam X No.7",
+                  style: TextStyle(
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.w600,
+                      fontStyle: FontStyle.italic)),
+            ],
+          ),
         ),
         body: SingleChildScrollView(
             child: Container(
-          padding: new EdgeInsets.all(8.0),
+          padding: new EdgeInsets.all(10.0),
           child: new Center(
             child: new Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 new Card(
                   color: Colors.deepPurple,
@@ -262,7 +276,14 @@ class _MyHomePageState extends State<MyHomePage> {
                                     child: IconButton(
                                       icon: Icon(Icons.video_library),
                                       color: Colors.white,
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  VideoPage()),
+                                        );
+                                      },
                                     ),
                                   ),
                                   SizedBox(height: 4),
@@ -346,46 +367,54 @@ class _MyHomePageState extends State<MyHomePage> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             new Container(
-                              padding: new EdgeInsets.all(16.0),
-                              width: 100,
-                              height: 100,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                gradient: LinearGradient(
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft,
+                                    colors: [
+                                      Colors.purple.withOpacity(0.7),
+                                      Colors.purpleAccent,
+                                      Colors.deepPurple.withOpacity(0.8),
+                                      Colors.deepPurpleAccent.withOpacity(0.8)
+                                    ]),
+                              ),
+                              width: 80,
+                              height: 80,
                               child: new Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
                                   new Ink(
-                                    decoration: const ShapeDecoration(
-                                        gradient: LinearGradient(
-                                            begin: Alignment.topRight,
-                                            end: Alignment.bottomLeft,
-                                            colors: [
-                                              Colors.purple,
-                                              Colors.purpleAccent,
-                                              Colors.deepPurple,
-                                              Colors.deepPurpleAccent
-                                            ]),
-                                        //color: Colors.purple,
-                                        shape: CircleBorder()),
                                     child: IconButton(
-                                      icon: Icon(Icons.library_music),
+                                      icon: Icon(
+                                        Icons.library_music,
+                                        size: 36,
+                                      ),
                                       color: Colors.white,
                                       onPressed: () {},
                                     ),
                                   ),
-                                  SizedBox(height: 4),
                                   Text(
                                     'BUKU ENDE',
-                                    style: TextStyle(fontSize: 12.0),
+                                    style: TextStyle(
+                                        fontSize: 12.0, color: Colors.white),
                                   )
                                 ],
                               ),
                             ),
                             new Container(
-                              padding: new EdgeInsets.all(16.0),
                               width: 100,
                               height: 100,
                               child: new Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
-                                  new Ink(
-                                    decoration: const ShapeDecoration(
+                                  new Container(
+                                    width: 60,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
                                         gradient: LinearGradient(
                                             begin: Alignment.topRight,
                                             end: Alignment.bottomLeft,
@@ -395,25 +424,38 @@ class _MyHomePageState extends State<MyHomePage> {
                                               Colors.deepPurple,
                                               Colors.deepPurpleAccent
                                             ]),
-                                        //color: Colors.purple,
-                                        shape: CircleBorder()),
-                                    child: IconButton(
-                                      icon: Icon(Icons.local_library_outlined),
-                                      color: Colors.white,
-                                      onPressed: () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  WartaPage()),
-                                        );
-                                      },
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.grey.withOpacity(
+                                                0.5), //color of shadow
+                                            spreadRadius: 5, //spread radius
+                                            blurRadius: 7, // blur radius
+                                            offset: Offset(0, 2),
+                                          )
+                                        ]),
+                                    child: new Ink(
+                                      child: IconButton(
+                                        iconSize: 32,
+                                        icon:
+                                            Icon(Icons.local_library_outlined),
+                                        color: Colors.white,
+                                        onPressed: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    WartaPage()),
+                                          );
+                                        },
+                                      ),
                                     ),
                                   ),
-                                  SizedBox(height: 4),
+                                  SizedBox(height: 10),
                                   Text(
-                                    'WARTA',
-                                    style: TextStyle(fontSize: 12.0),
+                                    'WARTA JEMAAT',
+                                    style: TextStyle(
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.w600),
                                   )
                                 ],
                               ),
