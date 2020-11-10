@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/Pages/artikelPage.dart';
 import 'package:flutter_app/Pages/beritaPage.dart';
+import 'package:flutter_app/Pages/notesPage.dart';
 import 'package:flutter_app/Pages/renunganPage.dart';
 import 'package:flutter_app/Pages/tataIbadahPage.dart';
 import 'package:flutter_app/Pages/videoPage.dart';
@@ -316,7 +318,14 @@ class _MyHomePageState extends State<MyHomePage> {
                                     child: IconButton(
                                       icon: Icon(Icons.article),
                                       color: Colors.white,
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  ArtikelPage()),
+                                        );
+                                      },
                                     ),
                                   ),
                                   SizedBox(height: 4),
@@ -350,7 +359,14 @@ class _MyHomePageState extends State<MyHomePage> {
                                     child: IconButton(
                                       icon: Icon(Icons.text_snippet),
                                       color: Colors.white,
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  NotesPage()),
+                                        );
+                                      },
                                     ),
                                   ),
                                   SizedBox(height: 4),
