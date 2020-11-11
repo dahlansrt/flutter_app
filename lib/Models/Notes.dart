@@ -10,8 +10,7 @@ class Notes {
   final String name;
   final String judul;
 
-  Notes(
-      {this.id, this.tanggal, this.tahun, this.bulan, this.name, this.judul});
+  Notes({this.id, this.tanggal, this.tahun, this.bulan, this.name, this.judul});
 
   factory Notes.fromJson(Map<String, dynamic> json) {
     return Notes(

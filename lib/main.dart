@@ -138,283 +138,57 @@ class _MyHomePageState extends State<MyHomePage> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             new Container(
-                              padding: new EdgeInsets.all(16.0),
                               width: 100,
                               height: 100,
-                              child: new Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  new Ink(
-                                    decoration: const ShapeDecoration(
-                                        gradient: LinearGradient(
-                                            begin: Alignment.topRight,
-                                            end: Alignment.bottomLeft,
-                                            colors: [
-                                              Colors.purple,
-                                              Colors.purpleAccent,
-                                              Colors.deepPurple,
-                                              Colors.deepPurpleAccent
-                                            ]),
-                                        //color: Colors.purple,
-                                        shape: CircleBorder()),
-                                    child: IconButton(
-                                      icon: Icon(Icons.menu_book),
-                                      color: Colors.white,
-                                      onPressed: () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  RenunganPage()),
-                                        );
-                                      },
-                                    ),
-                                  ),
-                                  SizedBox(height: 4),
-                                  Text(
-                                    'RENUNGAN',
-                                    style: TextStyle(fontSize: 12.0),
-                                  )
-                                ],
-                              ),
-                            ),
-                            new Container(
-                              padding: new EdgeInsets.all(16.0),
-                              width: 100,
-                              height: 100,
-                              child: new Column(
-                                children: <Widget>[
-                                  new Ink(
-                                    decoration: const ShapeDecoration(
-                                        gradient: LinearGradient(
-                                            begin: Alignment.topRight,
-                                            end: Alignment.bottomLeft,
-                                            colors: [
-                                              Colors.purple,
-                                              Colors.purpleAccent,
-                                              Colors.deepPurple,
-                                              Colors.deepPurpleAccent
-                                            ]),
-                                        //color: Colors.purple,
-                                        shape: CircleBorder()),
-                                    child: IconButton(
-                                      icon: Icon(Icons.message),
-                                      color: Colors.white,
-                                      onPressed: () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  BeritaPage()),
-                                        );
-                                      },
-                                    ),
-                                  ),
-                                  SizedBox(height: 4),
-                                  Text(
-                                    'BERITA',
-                                    style: TextStyle(fontSize: 12.0),
-                                  )
-                                ],
-                              ),
-                            ),
-                            new Container(
-                              padding: new EdgeInsets.all(16.0),
-                              width: 100,
-                              height: 100,
-                              child: new Column(
-                                children: <Widget>[
-                                  new Ink(
-                                    decoration: const ShapeDecoration(
-                                        gradient: LinearGradient(
-                                            begin: Alignment.topRight,
-                                            end: Alignment.bottomLeft,
-                                            colors: [
-                                              Colors.purple,
-                                              Colors.purpleAccent,
-                                              Colors.deepPurple,
-                                              Colors.deepPurpleAccent
-                                            ]),
-                                        //color: Colors.purple,
-                                        shape: CircleBorder()),
-                                    child: IconButton(
-                                      icon: Icon(Icons.call),
-                                      color: Colors.white,
-                                      onPressed: () {},
-                                    ),
-                                  ),
-                                  SizedBox(height: 4),
-                                  Text(
-                                    'HUBUNGI',
-                                    style: TextStyle(fontSize: 12.0),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        new Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            new Container(
-                              padding: new EdgeInsets.all(16.0),
-                              width: 100,
-                              height: 100,
-                              child: new Column(
-                                children: <Widget>[
-                                  new Ink(
-                                    decoration: const ShapeDecoration(
-                                        gradient: LinearGradient(
-                                            begin: Alignment.topRight,
-                                            end: Alignment.bottomLeft,
-                                            colors: [
-                                              Colors.purple,
-                                              Colors.purpleAccent,
-                                              Colors.deepPurple,
-                                              Colors.deepPurpleAccent
-                                            ]),
-                                        //color: Colors.purple,
-                                        shape: CircleBorder()),
-                                    child: IconButton(
-                                      icon: Icon(Icons.video_library),
-                                      color: Colors.white,
-                                      onPressed: () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  VideoPage()),
-                                        );
-                                      },
-                                    ),
-                                  ),
-                                  SizedBox(height: 4),
-                                  Text(
-                                    'VIDEO',
-                                    style: TextStyle(fontSize: 12.0),
-                                  )
-                                ],
-                              ),
-                            ),
-                            new Container(
-                              padding: new EdgeInsets.all(16.0),
-                              width: 100,
-                              height: 100,
-                              child: new Column(
-                                children: <Widget>[
-                                  new Ink(
-                                    decoration: const ShapeDecoration(
-                                        gradient: LinearGradient(
-                                            begin: Alignment.topRight,
-                                            end: Alignment.bottomLeft,
-                                            colors: [
-                                              Colors.purple,
-                                              Colors.purpleAccent,
-                                              Colors.deepPurple,
-                                              Colors.deepPurpleAccent
-                                            ]),
-                                        //color: Colors.purple,
-                                        shape: CircleBorder()),
-                                    child: IconButton(
-                                      icon: Icon(Icons.article),
-                                      color: Colors.white,
-                                      onPressed: () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  ArtikelPage()),
-                                        );
-                                      },
-                                    ),
-                                  ),
-                                  SizedBox(height: 4),
-                                  Text(
-                                    'ARTIKEL',
-                                    style: TextStyle(fontSize: 12.0),
-                                  )
-                                ],
-                              ),
-                            ),
-                            new Container(
-                              padding: new EdgeInsets.all(16.0),
-                              //alignment: Alignment.center,
-                              width: 100,
-                              height: 100,
-                              child: new Column(
-                                children: <Widget>[
-                                  new Ink(
-                                    decoration: const ShapeDecoration(
-                                        gradient: LinearGradient(
-                                            begin: Alignment.topRight,
-                                            end: Alignment.bottomLeft,
-                                            colors: [
-                                              Colors.purple,
-                                              Colors.purpleAccent,
-                                              Colors.deepPurple,
-                                              Colors.deepPurpleAccent
-                                            ]),
-                                        //color: Colors.purple,
-                                        shape: CircleBorder()),
-                                    child: IconButton(
-                                      icon: Icon(Icons.text_snippet),
-                                      color: Colors.white,
-                                      onPressed: () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  NotesPage()),
-                                        );
-                                      },
-                                    ),
-                                  ),
-                                  SizedBox(height: 4),
-                                  Text(
-                                    'PASTOR NOTES',
-                                    style: TextStyle(fontSize: 10.0),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        new Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            new Container(
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                gradient: LinearGradient(
-                                    begin: Alignment.topRight,
-                                    end: Alignment.bottomLeft,
-                                    colors: [
-                                      Colors.purple.withOpacity(0.7),
-                                      Colors.purpleAccent,
-                                      Colors.deepPurple.withOpacity(0.8),
-                                      Colors.deepPurpleAccent.withOpacity(0.8)
-                                    ]),
-                              ),
-                              width: 80,
-                              height: 80,
                               child: new Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
-                                  new Ink(
-                                    child: IconButton(
-                                      icon: Icon(
-                                        Icons.library_music,
-                                        size: 36,
+                                  new Container(
+                                    child: new Ink(
+                                      width: 60,
+                                      height: 60,
+                                      decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          gradient: LinearGradient(
+                                              begin: Alignment.topRight,
+                                              end: Alignment.bottomLeft,
+                                              colors: [
+                                                Colors.purple,
+                                                Colors.purpleAccent,
+                                                Colors.deepPurple,
+                                                Colors.deepPurpleAccent
+                                              ]),
+                                          boxShadow: [
+                                            BoxShadow(
+                                              color: Colors.grey.withOpacity(
+                                                  0.5), //color of shadow
+                                              spreadRadius: 5, //spread radius
+                                              blurRadius: 7, // blur radius
+                                              offset: Offset(0, 2),
+                                            )
+                                          ]),
+                                      child: IconButton(
+                                        iconSize:40,
+                                        icon: Icon(Icons.menu_book),
+                                        color: Colors.white,
+                                        onPressed: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    RenunganPage()),
+                                          );
+                                        },
                                       ),
-                                      color: Colors.white,
-                                      onPressed: () {},
                                     ),
                                   ),
+                                  SizedBox(height: 10),
                                   Text(
-                                    'BUKU ENDE',
+                                    'RENUNGAN',
                                     style: TextStyle(
-                                        fontSize: 12.0, color: Colors.white),
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.w600),
                                   )
                                 ],
                               ),
@@ -451,7 +225,341 @@ class _MyHomePageState extends State<MyHomePage> {
                                         ]),
                                     child: new Ink(
                                       child: IconButton(
-                                        iconSize: 32,
+                                        iconSize: 40,
+                                        icon: Icon(Icons.message),
+                                        color: Colors.white,
+                                        onPressed: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    BeritaPage()),
+                                          );
+                                        },
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 10),
+                                  Text(
+                                    'BERITA',
+                                    style: TextStyle(
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.w600),
+                                  )
+                                ],
+                              ),
+                            ),
+                            new Container(
+                              width: 100,
+                              height: 100,
+                              child: new Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  new Container(
+                                    width: 60,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        gradient: LinearGradient(
+                                            begin: Alignment.topRight,
+                                            end: Alignment.bottomLeft,
+                                            colors: [
+                                              Colors.purple,
+                                              Colors.purpleAccent,
+                                              Colors.deepPurple,
+                                              Colors.deepPurpleAccent
+                                            ]),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.grey.withOpacity(
+                                                0.5), //color of shadow
+                                            spreadRadius: 5, //spread radius
+                                            blurRadius: 7, // blur radius
+                                            offset: Offset(0, 2),
+                                          )
+                                        ]),
+                                    child: new Ink(
+                                      child: IconButton(
+                                        iconSize: 40,
+                                        icon: Icon(Icons.call),
+                                        color: Colors.white,
+                                        onPressed: () {},
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 10),
+                                  Text(
+                                    'HUBUNGI',
+                                    style: TextStyle(
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.w600),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                        new Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            new Container(
+                              width: 100,
+                              height: 100,
+                              child: new Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  new Container(
+                                    width: 60,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        gradient: LinearGradient(
+                                            begin: Alignment.topRight,
+                                            end: Alignment.bottomLeft,
+                                            colors: [
+                                              Colors.purple,
+                                              Colors.purpleAccent,
+                                              Colors.deepPurple,
+                                              Colors.deepPurpleAccent
+                                            ]),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.grey.withOpacity(
+                                                0.5), //color of shadow
+                                            spreadRadius: 5, //spread radius
+                                            blurRadius: 7, // blur radius
+                                            offset: Offset(0, 2),
+                                          )
+                                        ]),
+                                    child: new Ink(
+                                      child: IconButton(
+                                        iconSize: 40,
+                                        icon: Icon(Icons.video_library),
+                                        color: Colors.white,
+                                        onPressed: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    VideoPage()),
+                                          );
+                                        },
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 10),
+                                  Text(
+                                    'VIDEO',
+                                    style: TextStyle(
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.w600),
+                                  )
+                                ],
+                              ),
+                            ),
+                            new Container(
+                              width: 100,
+                              height: 100,
+                              child: new Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  new Container(
+                                    width: 60,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        gradient: LinearGradient(
+                                            begin: Alignment.topRight,
+                                            end: Alignment.bottomLeft,
+                                            colors: [
+                                              Colors.purple,
+                                              Colors.purpleAccent,
+                                              Colors.deepPurple,
+                                              Colors.deepPurpleAccent
+                                            ]),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.grey.withOpacity(
+                                                0.5), //color of shadow
+                                            spreadRadius: 5, //spread radius
+                                            blurRadius: 7, // blur radius
+                                            offset: Offset(0, 2),
+                                          )
+                                        ]),
+                                    child: new Ink(
+                                      child: IconButton(
+                                        iconSize: 40,
+                                        icon: Icon(Icons.article),
+                                        color: Colors.white,
+                                        onPressed: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    ArtikelPage()),
+                                          );
+                                        },
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 10),
+                                  Text(
+                                    'ARTIKEL',
+                                    style: TextStyle(
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.w600),
+                                  )
+                                ],
+                              ),
+                            ),
+                            new Container(
+                              width: 100,
+                              height: 100,
+                              child: new Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  new Container(
+                                    width: 60,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        gradient: LinearGradient(
+                                            begin: Alignment.topRight,
+                                            end: Alignment.bottomLeft,
+                                            colors: [
+                                              Colors.purple,
+                                              Colors.purpleAccent,
+                                              Colors.deepPurple,
+                                              Colors.deepPurpleAccent
+                                            ]),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.grey.withOpacity(
+                                                0.5), //color of shadow
+                                            spreadRadius: 5, //spread radius
+                                            blurRadius: 7, // blur radius
+                                            offset: Offset(0, 2),
+                                          )
+                                        ]),
+                                    child: new Ink(
+                                      child: IconButton(
+                                        iconSize: 40,
+                                        icon: Icon(Icons.text_snippet),
+                                        color: Colors.white,
+                                        onPressed: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    NotesPage()),
+                                          );
+                                        },
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 10),
+                                  Text(
+                                    'PASTOR NOTES',
+                                    style: TextStyle(
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.w600),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                        new Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            new Container(
+                              width: 100,
+                              height: 100,
+                              child: new Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  new Container(
+                                    width: 60,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        gradient: LinearGradient(
+                                            begin: Alignment.topRight,
+                                            end: Alignment.bottomLeft,
+                                            colors: [
+                                              Colors.purple,
+                                              Colors.purpleAccent,
+                                              Colors.deepPurple,
+                                              Colors.deepPurpleAccent
+                                            ]),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.grey.withOpacity(
+                                                0.5), //color of shadow
+                                            spreadRadius: 5, //spread radius
+                                            blurRadius: 7, // blur radius
+                                            offset: Offset(0, 2),
+                                          )
+                                        ]),
+                                    child: new Ink(
+                                      child: IconButton(
+                                        iconSize: 40,
+                                        icon: Icon(
+                                          Icons.library_music,
+                                        ),
+                                        color: Colors.white,
+                                        onPressed: () {},
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 10),
+                                  Text(
+                                    'BUKU ENDE',
+                                    style: TextStyle(
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.w600),
+                                  )
+                                ],
+                              ),
+                            ),
+                            new Container(
+                              width: 100,
+                              height: 100,
+                              child: new Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  new Container(
+                                    width: 60,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        gradient: LinearGradient(
+                                            begin: Alignment.topRight,
+                                            end: Alignment.bottomLeft,
+                                            colors: [
+                                              Colors.purple,
+                                              Colors.purpleAccent,
+                                              Colors.deepPurple,
+                                              Colors.deepPurpleAccent
+                                            ]),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.grey.withOpacity(
+                                                0.5), //color of shadow
+                                            spreadRadius: 5, //spread radius
+                                            blurRadius: 7, // blur radius
+                                            offset: Offset(0, 2),
+                                          )
+                                        ]),
+                                    child: new Ink(
+                                      child: IconButton(
+                                        iconSize: 40,
                                         icon:
                                             Icon(Icons.local_library_outlined),
                                         color: Colors.white,
@@ -477,13 +585,17 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             ),
                             new Container(
-                              padding: new EdgeInsets.all(16.0),
                               width: 100,
                               height: 100,
                               child: new Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
-                                  new Ink(
-                                    decoration: const ShapeDecoration(
+                                  new Container(
+                                    width: 60,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
                                         gradient: LinearGradient(
                                             begin: Alignment.topRight,
                                             end: Alignment.bottomLeft,
@@ -493,25 +605,37 @@ class _MyHomePageState extends State<MyHomePage> {
                                               Colors.deepPurple,
                                               Colors.deepPurpleAccent
                                             ]),
-                                        //color: Colors.purple,
-                                        shape: CircleBorder()),
-                                    child: IconButton(
-                                      icon: Icon(Icons.list_alt),
-                                      color: Colors.white,
-                                      onPressed: () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  TataIbadahPage()),
-                                        );
-                                      },
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.grey.withOpacity(
+                                                0.5), //color of shadow
+                                            spreadRadius: 5, //spread radius
+                                            blurRadius: 7, // blur radius
+                                            offset: Offset(0, 2),
+                                          )
+                                        ]),
+                                    child: new Ink(
+                                      child: IconButton(
+                                        iconSize: 40,
+                                        icon: Icon(Icons.list_alt),
+                                        color: Colors.white,
+                                        onPressed: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    TataIbadahPage()),
+                                          );
+                                        },
+                                      ),
                                     ),
                                   ),
-                                  SizedBox(height: 4),
+                                  SizedBox(height: 10),
                                   Text(
                                     'TATA IBADAH',
-                                    style: TextStyle(fontSize: 12.0),
+                                    style: TextStyle(
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.w600),
                                   )
                                 ],
                               ),

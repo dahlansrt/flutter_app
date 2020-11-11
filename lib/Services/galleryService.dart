@@ -7,6 +7,7 @@ import 'package:http/http.dart';
 class GalleryService {
 
   //expected: https://kaleidosblog.s3-eu-west-1.amazonaws.com/flutter_gallery/data.json
+  //http://www.kaleidosblog.com/flutter-grid-view-image-gallery-how-to-download-and-display-images
   //https://aloisdeniel.github.io/flutter-json-serialization/
   final String galleryURL =
       "http://52.40.55.251/tebetandro/api/index.php/Api/getGallery";
